@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="product.Controller">
+   <children>
+      <TextField fx:id="txtName" layoutX="40.0" layoutY="40.0" promptText="Tên sản phẩm" />
+      <TextField fx:id="txtGia" layoutX="40.0" layoutY="77.0" prefHeight="31.0" prefWidth="110.0" promptText="GIÁ" />
+      <TextField fx:id="txtSoLuong" layoutX="40.0" layoutY="120.0" prefHeight="31.0" prefWidth="110.0" promptText="Số lượng" />
+      <TextField fx:id="txtDanhMuc" layoutX="40.0" layoutY="377.0" promptText="Danh mục" />
+      <Button layoutX="163.0" layoutY="443.0" mnemonicParsing="false" onAction="#creat" text="add" />
+      <Button layoutX="40.0" layoutY="442.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="63.0" text="delet" />
+      <ListView fx:id="lvi" layoutX="299.0" layoutY="56.0" prefHeight="363.0" prefWidth="265.0" />
+      <TextArea fx:id="txtMoTa" layoutX="40.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0" promptText="Mô tả" />
+   </children>
+</Pane>
