@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx.FormController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="139.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new Student">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="163.0" layoutY="117.0" prefHeight="45.0" prefWidth="230.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="163.0" layoutY="192.0" prefHeight="45.0" prefWidth="230.0" promptText="Email" />
+      <TextField fx:id="txtTel" layoutX="163.0" layoutY="266.0" prefHeight="45.0" prefWidth="230.0" promptText="TelePhone" />
+      <Button onAction="#backToList" layoutX="24.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="&lt;&lt;Back" />
+      <Button onAction="#submit" layoutX="461.0" layoutY="297.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Submit" />
+   </children>
+</Pane>

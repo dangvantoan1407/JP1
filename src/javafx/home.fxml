@@ -8,15 +8,17 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: 0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.HomeController">
    <children>
-      <Text layoutX="219.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Word">
+      <Text layoutX="219.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font size="32.0" />
          </font>
       </Text>
-      <Button layoutX="150.0" layoutY="313.0" mnemonicParsing="false" onAction="#submit" text="Button" />
-      <TextField fx:id="txtName" layoutX="50.0" layoutY="113.0" promptText="Name" />
-      <TextField fx:id="txtEmail" layoutX="50.0" layoutY="185.0" promptText="Email" />
-      <TextField fx:id="txtPhone" layoutX="50.0" layoutY="241.0" promptText="Phone" />
-      <ListView fx:id="lv" layoutX="307.0" layoutY="101.0" onMouseClicked="#editStudent" prefHeight="206.0" prefWidth="229.0" />
+      <Text layoutX="224.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StudentList">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Button  onAction="#goToForm" layoutX="468.0" layoutY="37.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: red;" text="Create" />
+      <ListView layoutX="75.0" layoutY="119.0" prefHeight="234.0" prefWidth="429.0" />
    </children>
 </Pane>

@@ -1,67 +1,41 @@
 package javafx;
 
+import javafx.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.ResourceBundle;
 
-public class HomeController {
-    public ListView<Student> lv;
-    public TextField txtName;
-    public TextField txtEmail;
-    public TextField txtPhone;
-
+public class HomeController implements  Initializable {
     public static ObservableList<Student> listStudents = FXCollections.observableArrayList();
+    public ListView<Student> lv;
     public static Student editStudent;
 
 
-    public void submit(ActionEvent actionEvent) {
-        try {
-            String name = txtName.getText();
-            String email = txtEmail.getText();
-            String tel = txtPhone.getText();
-            if (editStudent != null) {
-                editStudent.setName(name);
-                editStudent.setEmail(email);
-                editStudent.setTel(tel);
-                lv.setItems(listStudents);
-                lv.refresh();
-                editStudent = null;
-                txtName.clear();
-                txtEmail.clear();
-                txtPhone.clear();
-                return;
-            }
-            for (Student s : listStudents) {
-                if (s.getName().equals(name))
-                    throw new Exception("Tên sinh viên đã tồn tại");
-                if (s.getEmail().equals(email))
-                    throw new Exception("Email đã tồn tại");
-            }
-            Student sv = new Student(name, email, tel);
-            listStudents.add(sv);
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(e.getMessage());
-            alert.show();
-        }
 
+
+
+    public void goToForm(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("form.fxml"));
+        Main.mainStage.setScene(new Scene(root,600,400));
 
     }
-
-    public void editStudent(MouseEvent mouseEvent) {
-        editStudent = lv.getSelectionModel().getSelectedItem();
-        if (editStudent != null) {
-            txtName.setText(editStudent.getName());
-            txtEmail.setText(editStudent.getEmail());
-            txtPhone.setText(editStudent.getTel());
-        }
-    }//ListView
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        lv.setItems(listStudents);
+    }
 }
