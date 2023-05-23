@@ -13,9 +13,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         mainStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
+        Parent root = FXMLLoader.<Parent>load(getClass().getResource("home.fxml"));
         primaryStage.setScene(new Scene(root,600,400));
-        primaryStage.setTitle("T2210A JavaFX Demo");
+        primaryStage.setTitle("Toàn");
         primaryStage.show();
     }
 }
