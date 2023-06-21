@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: 0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.HomeController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="933.0" style="-fx-background-color: 0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.HomeController">
    <children>
       <Text layoutX="219.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font size="32.0" />
          </font>
       </Text>
-      <Text layoutX="224.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StudentList">
+      <Text fx:id="lbPage" layoutX="384.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StudentList">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <Button  onAction="#goToForm" layoutX="468.0" layoutY="37.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: red;" text="Create" />
-      <ListView fx:id="lv" layoutX="75.0" layoutY="119.0" prefHeight="234.0" prefWidth="429.0" />
+      <Button fx:id="btnCreate" layoutX="683.0" layoutY="37.0" mnemonicParsing="false" onAction="#goToForm" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: red;" text="Create" />
+      <Button layoutX="882.0" layoutY="16.0" mnemonicParsing="false" onAction="#editstd" prefHeight="31.0" prefWidth="28.0" text="Edit" />
+      <TableView fx:id="tbV" layoutX="179.0" layoutY="134.0" prefHeight="200.0" prefWidth="562.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="69.0" text="ID" />
+          <TableColumn fx:id="tcName" prefWidth="114.0" text="Name" />
+            <TableColumn fx:id="tcEmail" prefWidth="138.0" text="Email" />
+            <TableColumn fx:id="tcTel" prefWidth="143.0" text="Telephone" />
+            <TableColumn fx:id="tcAction" prefWidth="101.0" text="Action" />
+        </columns>
+      </TableView>
+      <Text fx:id="txtMin" layoutX="20.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtSec" layoutX="71.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="58.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="13.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cbLang" layoutX="11.0" layoutY="74.0" onAction="#chooseLang" prefWidth="150.0" />
    </children>
 </Pane>

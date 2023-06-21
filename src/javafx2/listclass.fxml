@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx2.ClassroomController">
+   <children>
+      <Text layoutX="178.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ClassroomsList">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbvC" layoutX="54.0" layoutY="83.0" prefHeight="287.0" prefWidth="506.0">
+        <columns>
+          <TableColumn fx:id="cID" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="cName" prefWidth="132.0" text="Name" />
+            <TableColumn fx:id="cRoom" prefWidth="145.0" text="Room" />
+            <TableColumn fx:id="cAction" prefWidth="162.0" text="Action" />
+        </columns>
+      </TableView>
+      <Button layoutX="469.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoForm" text="Create" />
+   </children>
+</Pane>

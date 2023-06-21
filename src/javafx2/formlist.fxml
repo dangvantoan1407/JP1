@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="javafx2.FormClass" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtId" layoutX="45.0" layoutY="102.0" prefHeight="45.0" prefWidth="56.0" promptText="ID" />
+      <TextField fx:id="txtName" layoutX="145.0" layoutY="101.0" prefHeight="45.0" prefWidth="186.0" promptText="Name" />
+      <TextField fx:id="txtRoom" layoutX="367.0" layoutY="101.0" prefHeight="45.0" prefWidth="186.0" promptText="Room" />
+      <Button onAction="#gotoAdd" layoutX="437.0" layoutY="216.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Add" />
+      <Button onAction="#gotoBack" layoutX="13.0" layoutY="37.0" mnemonicParsing="false" text="&lt;&lt;Back" />
+   </children>
+</Pane>

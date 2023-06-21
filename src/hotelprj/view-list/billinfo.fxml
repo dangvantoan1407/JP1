@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="500.0" style="-fx-background-color: #FF9900;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotelprj.controller.BillInfoController">
+   <children>
+      <Label layoutX="147.0" layoutY="40.0" text="Bill Details">
+         <font>
+            <Font name="Segoe UI Black" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roomNumber" layoutX="127.0" layoutY="124.0" prefHeight="53.0" prefWidth="262.0" promptText=" RoomNumber" />
+      <TextField fx:id="customerName" layoutX="129.0" layoutY="196.0" prefHeight="53.0" prefWidth="262.0" promptText="CustomerName" />
+      <TextField fx:id="customerIDNumber" layoutX="129.0" layoutY="264.0" prefHeight="53.0" prefWidth="262.0" promptText="CustomerIDNumber" />
+      <TextField fx:id="Amount" layoutX="128.0" layoutY="334.0" prefHeight="53.0" prefWidth="262.0" promptText="Amount" />
+      <Button fx:id="print" layoutX="185.0" layoutY="442.0" mnemonicParsing="false" onAction="#handlePrintAction" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #fff;" text="Print-Bill" />
+   </children>
+</AnchorPane>

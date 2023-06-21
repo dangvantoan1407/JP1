@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1236.0" style="-fx-background-color: #FF9900;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotelprj.controller.BillController">
+   <children>
+      <TextField fx:id="search" layoutX="86.0" layoutY="70.0" prefHeight="42.0" prefWidth="254.0" promptText="Type Date" style="-fx-border-radius: 50px;" />
+      <TableView fx:id="billTable" layoutX="73.0" layoutY="130.0" prefHeight="464.0" prefWidth="1086.0">
+        <columns>
+          <TableColumn fx:id="txtID" prefWidth="76.0" text="Bill ID" />
+          <TableColumn fx:id="txtName" prefWidth="211.0" text="CustomerName" />
+            <TableColumn fx:id="txtTel" prefWidth="181.0" text="CustomerTel" />
+            <TableColumn fx:id="txtNumber" prefWidth="140.0" text="RoomNumber" />
+            <TableColumn fx:id="txtIn" prefWidth="151.0" text="DateIIn" />
+            <TableColumn fx:id="txtOut" prefWidth="165.0" text="DateOut" />
+            <TableColumn fx:id="txtPrice" minWidth="0.0" prefWidth="160.0" text="Price" />
+        </columns>
+      </TableView>
+      <Text layoutX="497.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bills Details">
+         <font>
+            <Font name="Segoe UI Black" size="34.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToHome" text="&lt;&lt;Back" />
+   </children>
+</AnchorPane>
